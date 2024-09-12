@@ -1,0 +1,48 @@
+{%extends 'layout.html'%}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css'%}">
+    <script  script="{% static 'js\bootstrap.bundle.min.js'%}"></script>
+</head>
+<body>
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col-sm-6 col-mt-6">
+        <img src="{%static 'images1\login.webp'%}" class="img img-thumbnail w-100" alt="" >
+    </div>
+    <div class="col-sm-6">
+        <div>
+            <h1 style="font-family:sans-serif;">Login</h1>
+          <span>{{msg}}</span>
+            <form action="/logincheck" method="">
+                <div class="mb-2">
+                    <input name="EMail" id="EmailID" class="form-control border border-3 border-light"  type="text" placeholder="Email:" >
+                </div>
+                        <div class="mb-2">
+                            <input name="Password" id="Passwordid" class="form-control border border-3 border-light"  type="text" placeholder="Password:" >
+                        </div>
+                
+                    <div class="mb-2">
+                        <button class="btn "type="submit" style="background-color: purple;">Login</button>
+                        <button class="btn "type="reset" style="background-color: rgb(242, 176, 242);">Reset</button>
+                        
+
+                    </div>
+                   </div>
+
+                </div>
+            </form>
+        </div>
+    
+</div>
+</div>
+{% endblock %}
+</body>
+</html>

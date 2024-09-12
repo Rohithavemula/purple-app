@@ -1,0 +1,34 @@
+{%extends 'adminlayout.html'%}
+    {%block content%}
+    <div class="container">
+        <h3>ADMIN PAGE</h3>
+        <div class="row">
+            <div class="col-sm-12 p-4 overflow-scroll">
+                <div class="table">
+                    <thead>
+                        <th>FULLNAME</th>
+                        <th>EMAIL</th>
+                        <th>PASSWORD</th>
+                        <th>DESIG</th>
+                    </thead>
+                    {%for user in users %}
+                    <tr>
+                        <form>
+                            <td><input class="form control" name="Fullname"type="text" value="{{user.Fullname}}"></td> 
+                            <td><input class="form control"disable name="Email"type="text" value="{{user.Email}}"></td> 
+                            <td><input class="form control" name="Password"type="text" value="{{user.Password}}"></td> 
+                            <td><input class="form control" name="desig"type="text" value="{{user.desig}}"></td> 
+                           <td><button class="btn btn-primary" value="update" type="submit">UPDATE</button></td>
+                           <td><button class="btn btn-danger" value="Delete" type="submit">DELETE</button></td>
+
+                        </form>
+                        </tr>
+                        {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {%endblock %}
+</body>
+</html>
